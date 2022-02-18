@@ -19,8 +19,9 @@ const ResultContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    width: 100%;
     height: 500px;
+    padding: 10px;
     background-color: rgb(90, 0, 99);
     border: 7px solid rgb(53, 0, 58);
     border-radius: 20px;
