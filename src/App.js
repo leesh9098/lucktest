@@ -1,6 +1,5 @@
 import "./reset.css";
 import styled from "styled-components";
-import BackgroundImage from "./images/space.jpg";
 import "animate.css";
 
 export const Wrap = styled.div`
@@ -8,10 +7,8 @@ export const Wrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 320px;
+  width: 100%;
   height: 100%;
-  background: url(${BackgroundImage}) center center no-repeat;
-  background-size: cover;
   @media screen and (min-width: 768px) {
     width: 500px;
   }

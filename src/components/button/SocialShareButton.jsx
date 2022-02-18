@@ -11,7 +11,6 @@ const CopyBtn = styled.button`
     box-sizing: border-box;
     background-color: purple;
     color: white;
-    font-size: 16px;
     font-weight: bold;
 `
 
@@ -28,17 +27,18 @@ const ShareText = styled.p`
 `
 
 export default function SocialShareButton() {
+    const url = window.location.href;
     return (
         <Container>
             <ShareText>친구에게 테스트 공유하기</ShareText>
             <ShareContainer>
-                <FacebookShareButton url="" style={{ marginRight: '10px'}}>
+                <FacebookShareButton url={url} style={{ marginRight: '10px'}}>
                     <FacebookIcon size={50} round={true} />
                 </FacebookShareButton>
-                <TwitterShareButton url="" style={{ marginRight: '10px' }}>
+                <TwitterShareButton url={url} style={{ marginRight: '10px' }}>
                     <TwitterIcon size={50} round={true} />
                 </TwitterShareButton>
-                <CopyToClipboard text="" onCopy={() => alert("클립보드에 복사되었습니다")}>
+                <CopyToClipboard text={url} onCopy={() => alert("클립보드에 복사되었습니다")}>
                     <CopyBtn>URL</CopyBtn>
                 </CopyToClipboard>
             </ShareContainer>
