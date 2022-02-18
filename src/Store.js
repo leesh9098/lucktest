@@ -3,10 +3,12 @@ import Result from "./pages/Result";
 import Explain from "./routes/Explain";
 import Home from "./routes/Home";
 import countapi from "countapi-js";
+import Loading from "./routes/Loading";
 
 export const StepNum = [
     <Home />,
     <Explain />,
+    <Loading />,
     <Result />
 ]
 
@@ -20,7 +22,7 @@ export default createStore((state, action) => {
     }
 
     if (action.type === 'RESET') {
-        countapi.update('numberofuser', 'users', 1)
+        countapi.update('usercount', 'users', 1)
             .then(res => action.hitCount = res.value)
         return { stage: StepNum[0] }
     }

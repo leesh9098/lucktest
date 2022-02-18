@@ -5,11 +5,13 @@ import countapi from "countapi-js";
 import TrepickLogo from "../images/Logo.png"
 
 export const Container = styled.div`
+    text-align: center;
     margin-bottom: 50px;
 `
 
 export const Logo = styled.div`
     width: 143px;
+    margin: 0 auto;
 `
 
 export const LogoImage = styled.img`
@@ -19,21 +21,25 @@ export const LogoImage = styled.img`
 export const Title = styled.p`
     font-size: 30px;
     font-weight: bold;
+    color: white;
     text-align: center;
 `
 
 export const Text = styled.p`
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
     text-align: center;
 `
 
 export const NumberOfUser = styled.p`
-
+    color: white;
 `
 
 export default class Home extends React.Component {
     state = {
         stepLocation: 0,
-        hitCount: this.props.hitCount
+        hitCount: 0
     }
 
     componentDidMount() {
@@ -43,7 +49,7 @@ export default class Home extends React.Component {
 
     render() {
         return (
-            <>
+            <div className="animate__animated animate__fadeIn anlmate__slower">
                 <Container>
                     <Logo>
                         <LogoImage src={TrepickLogo} alt="로고 이미지" />
@@ -60,7 +66,7 @@ export default class Home extends React.Component {
                     <NumberOfUser>{`현재 총 ${this.state.hitCount}명이 참여했습니다.`}</NumberOfUser>
                 </Container>
                 <NextButton text="> 시작하기" stepLocation={this.state.stepLocation} />
-            </>
+            </div>
         );
     }
 }

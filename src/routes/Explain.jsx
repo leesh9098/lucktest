@@ -9,7 +9,7 @@ export default class Explain extends React.Component {
 
     render() {
         return (
-            <>
+            <div className="animate__animated animate__fadeIn animate__slower">
                 <Container>
                     <Text>10~20초 동안 당신의 질문에 집중하세요.</Text>
                     <Text>질문은 한번에 하나씩, 완전한 문장으로</Text>
@@ -18,7 +18,7 @@ export default class Explain extends React.Component {
                 <Container>
                     <NextButton text="질문에 대한 답을 볼 준비가 되었으면 버튼을 누르세요." stepLocation={this.state.stepLocation} />
                 </Container>
-            </>
+            </div>
         );
     }
 }

@@ -1,26 +1,27 @@
+import React from "react";
 import styled from "styled-components";
-import { Wrap } from "../App";
+import NextButton from "../components/button/NextButton";
+import SocialShareButton from "../components/button/SocialShareButton";
 import { ResultData } from "../data/ResultData";
 import { Container } from "../routes/Home";
 
 const ResultText = styled.p`
-    font-size: 30px;
+    color: white;
+    font-size: 26px;
     font-weight: bold;
     text-align: center;
-`
-const ShareText = styled.p`
-    font-weight: bold;
-    text-align: center;
+    margin-bottom: 20px;
 `
 
 export default function Result() {
 
     return (
-        <Wrap>
+        <div className="animate__animated animate__fadeIn animate__slower">
             <Container>
                 <ResultText>{ResultData[Math.floor(Math.random() * (10 - 0) + 0)]}</ResultText>
-                <ShareText>친구에게 테스트 공유하기</ShareText>
+                <SocialShareButton />
+                <NextButton text="다시하기" retry />
             </Container>
-        </Wrap>
+        </div>
     )
 }

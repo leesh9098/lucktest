@@ -1,6 +1,5 @@
 import Store from "../../Store";
 import styled from "styled-components";
-// import { useNavigate } from "react-router-dom";
 
 export const NextBtn = styled.button`
         width: 300px;
@@ -16,7 +15,6 @@ export const NextBtn = styled.button`
     `
 
 export default function NextButton(props) {
-    // const navigate = useNavigate();
 
     const nextStep = () => {
         Store.dispatch({ type: 'NEXTSTEP', stepLocation: props.stepLocation });
@@ -26,10 +24,6 @@ export default function NextButton(props) {
         Store.dispatch({ type: 'RESET' });
     }
 
-    // const showResult = () => {
-    //     navigate("/result");
-    // }
-
     return (
         <>
             {
@@ -38,14 +32,9 @@ export default function NextButton(props) {
                         {props.text}
                     </NextBtn>
                 :
-                    // props.result ?
-                    //     <NextBtn onClick={showResult}>
-                    //         {props.text}
-                    //     </NextBtn>
-                    // :
-                        <NextBtn onClick={nextStep}>
-                            {props.text}
-                        </NextBtn>
+                    <NextBtn onClick={nextStep}>
+                        {props.text}
+                    </NextBtn>
             }
         </>
     )
