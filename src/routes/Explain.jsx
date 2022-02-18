@@ -25,7 +25,7 @@ export default class Explain extends React.Component {
                     <Text>(예: "이번에 취업이 될까요?")</Text>
                 </Container>
                 <Container>
-                    <InputConcern placeholder="당신의 고민을 적어주세요" />
+                    <InputConcern id="concern" placeholder="당신의 고민을 적어주세요" required />
                     <NextButton text="> 다음" stepLocation={this.state.stepLocation} />
                 </Container>
             </div>

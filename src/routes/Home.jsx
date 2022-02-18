@@ -26,10 +26,13 @@ export const Title = styled.p`
 `
 
 export const Text = styled.p`
+    width: 300px;
     font-size: 20px;
     font-weight: bold;
     color: white;
     text-align: center;
+    word-break: keep-all;
+    margin: 0 auto;
     margin-bottom: 10px;
 `
 
