@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Bgm from "../../data/0. 시작.mp3";
 
 export const NextBtn = styled.button`
-    width: 300px;
+    width: 260px;
     height: 50px;
     border: none;
     border-radius: 50px;

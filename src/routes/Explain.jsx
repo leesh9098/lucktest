@@ -1,6 +1,15 @@
 import React from "react";
+import styled from "styled-components";
 import NextButton from "../components/button/NextButton";
 import { Container, Text } from "./Home";
+
+export const InputConcern = styled.input`
+    width: 280px;
+    height: 40px;
+    padding-left: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+`
 
 export default class Explain extends React.Component {
     state = {
@@ -16,7 +25,8 @@ export default class Explain extends React.Component {
                     <Text>(예: "이번에 취업이 될까요?")</Text>
                 </Container>
                 <Container>
-                    <NextButton text="질문에 대한 답을 볼 준비가 되었으면 버튼을 누르세요." stepLocation={this.state.stepLocation} />
+                    <InputConcern placeholder="당신의 고민을 적어주세요" />
+                    <NextButton text="> 다음" stepLocation={this.state.stepLocation} />
                 </Container>
             </div>
         );

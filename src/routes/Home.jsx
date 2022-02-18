@@ -30,9 +30,10 @@ export const Text = styled.p`
     font-weight: bold;
     color: white;
     text-align: center;
+    margin-bottom: 10px;
 `
 
-export const NumberOfUser = styled.p`
+export const SmallText = styled.p`
     color: white;
 `
 
@@ -67,7 +68,7 @@ export default class Home extends React.Component {
                     <Text>우주는 알고 있습니다.</Text>
                 </Container>
                 <Container>
-                    <NumberOfUser>{`현재 총 ${this.state.hitCount}명이 참여했습니다.`}</NumberOfUser>
+                    <SmallText>{`현재 총 ${this.state.hitCount}명이 참여했습니다.`}</SmallText>
                 </Container>
                 <NextButton text="> 시작하기" stepLocation={this.state.stepLocation} />
             </div>
