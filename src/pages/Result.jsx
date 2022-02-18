@@ -18,7 +18,7 @@ export default function Result() {
     return (
         <div className="animate__animated animate__fadeIn animate__slower">
             <Container>
-                <ResultText>{ResultData[Math.floor(Math.random() * (10 - 0) + 0)]}</ResultText>
+                <ResultText>{ResultData[Math.floor(Math.random() * (348 - 0) + 0)].result}</ResultText>
                 <SocialShareButton />
                 <NextButton text="다시하기" retry />
             </Container>
