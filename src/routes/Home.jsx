@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import NextButton from "../components/button/NextButton";
+import NextButton, { bgm } from "../components/button/NextButton";
 import countapi from "countapi-js";
 import TrepickLogo from "../images/Logo.png"
 
@@ -45,6 +45,10 @@ export default class Home extends React.Component {
     componentDidMount() {
         countapi.get('usercount', 'users')
         .then(res => this.setState({ hitCount: res.value }))
+        if (!bgm.paused) {
+            bgm.pause();
+            bgm.currentTime = 0;
+        }
     }
 
     render() {
