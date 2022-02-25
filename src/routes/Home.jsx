@@ -58,6 +58,7 @@ export default class Home extends React.Component {
     }
 
     componentDidMount() {
+        window.localStorage.setItem("userId", Math.random().toString(36).substring(2, 9))
         countapi.get('usercount', 'users')
         .then(res => this.setState({ hitCount: res.value }))
         if (!bgm.paused) {

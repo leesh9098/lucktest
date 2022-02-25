@@ -1,6 +1,7 @@
 import Store from "../../Store";
 import styled from "styled-components";
 import Bgm from "../../data/0. 시작.mp3";
+import axios from "axios";
 
 export const NextBtn = styled.button`
     display: block;
@@ -26,7 +27,20 @@ export default function NextButton(props) {
             if (document.getElementById("concern").value === "") {
                 alert("고민을 입력해주세요");
             } else {
-                Store.dispatch({ type: 'NEXTSTEP', stepLocation: props.stepLocation });
+                axios.post("https://devapi.trepick.com/event-log", {
+                    storyName: "인생 해결책",
+                    userId: window.localStorage.getItem("userId"),
+                    attendeeInfo: {
+                        userReview: `입력텍스트: ${props.userInput}, 해답: `,
+                    }
+                })
+                .then((success) => {
+                    console.log(success);
+                })
+                .catch((err) => {
+                    console.log(err);
+                })
+                Store.dispatch({ type: 'NEXTSTEP', stepLocation: props.stepLocation, answer: props.answer });
             }
         } else {
             Store.dispatch({ type: 'NEXTSTEP', stepLocation: props.stepLocation });

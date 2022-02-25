@@ -25,7 +25,8 @@ export const RedText = styled.p`
 
 export default class Explain extends React.Component {
     state = {
-        stepLocation: 1
+        stepLocation: 1,
+        userInput: ""
     }
 
     render() {
@@ -39,9 +40,19 @@ export default class Explain extends React.Component {
                     <Text>(예: "이번에 취업이 될까요?")</Text>
                 </Container>
                 <Container>
-                    <InputConcern id="concern" placeholder="당신의 고민을 적어주세요" required />
+                    <InputConcern
+                        id="concern"
+                        placeholder="당신의 고민을 적어주세요"
+                        value={this.state.userInput}
+                        onChange={(e) => this.setState({ userInput: e.target.value })}
+                        required />
                     <RedText>*질문은 기록 및 저장되지 않습니다.</RedText>
-                    <NextButton size="220px" text="> 질문하기" stepLocation={this.state.stepLocation} />
+                    <NextButton
+                        size="220px"
+                        text="> 질문하기"
+                        stepLocation={this.state.stepLocation}
+                        userInput={this.state.userInput}
+                    />
                 </Container>
             </div>
         );

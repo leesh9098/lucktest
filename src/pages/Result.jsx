@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import NextButton from "../components/button/NextButton";
 import SocialShareButton from "../components/button/SocialShareButton";
-import { ResultData } from "../data/ResultData";
 import { Container, TextContainer } from "../routes/Home";
+import { ResultData } from "../data/ResultData";
 
 const ResultText = styled.p`
     color: white;
