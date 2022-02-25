@@ -3,6 +3,7 @@ import { Oval } from "react-loader-spinner";
 import styled from "styled-components";
 import Store from "../Store";
 import { Container } from "./Home";
+import countapi from "countapi-js";
 
 const LoadingText = styled.p`
     color: white;
@@ -11,6 +12,7 @@ const LoadingText = styled.p`
 
 export default function Loading() {
     useEffect(() => {
+        countapi.update('usercount', 'users', 1)
         setTimeout(() => {
             Store.dispatch({ type: 'NEXTSTEP', stepLocation: 2 });
             }, 2000)

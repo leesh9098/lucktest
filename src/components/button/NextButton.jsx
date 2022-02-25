@@ -3,7 +3,8 @@ import styled from "styled-components";
 import Bgm from "../../data/0. 시작.mp3";
 
 export const NextBtn = styled.button`
-    width: 300px;
+    display: block;
+    width: ${props => props.size};
     height: 50px;
     border: none;
     border-radius: 50px;
@@ -13,6 +14,7 @@ export const NextBtn = styled.button`
     box-sizing: border-box;
     word-break: keep-all;
     white-space: pre-wrap;
+    margin: 0 auto;
 `
 
 export const bgm = new Audio(Bgm);
@@ -42,11 +44,11 @@ export default function NextButton(props) {
         <>
             {
                 props.retry ?
-                    <NextBtn onClick={returnHome}>
+                    <NextBtn onClick={returnHome} size={props.size}>
                         {props.text}
                     </NextBtn>
                 :
-                    <NextBtn onClick={nextStep}>
+                    <NextBtn onClick={nextStep} size={props.size}>
                         {props.text}
                     </NextBtn>
             }

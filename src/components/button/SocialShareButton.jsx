@@ -1,7 +1,6 @@
 import { CopyToClipboard } from "react-copy-to-clipboard/lib/Component";
 import { FacebookIcon, FacebookShareButton, TwitterIcon, TwitterShareButton } from "react-share";
 import styled from "styled-components";
-import { Container } from "../../routes/Home";
 
 const CopyBtn = styled.button`
     border-radius: 50%;
@@ -29,7 +28,7 @@ const ShareText = styled.p`
 export default function SocialShareButton() {
     const url = window.location.href;
     return (
-        <Container>
+        <>
             <ShareText>친구에게 테스트 공유하기</ShareText>
             <ShareContainer>
                 <FacebookShareButton url={url} style={{ marginRight: '10px'}}>
@@ -42,6 +41,6 @@ export default function SocialShareButton() {
                     <CopyBtn>URL</CopyBtn>
                 </CopyToClipboard>
             </ShareContainer>
-        </Container>
+        </>
     )
 }

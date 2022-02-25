@@ -10,7 +10,7 @@ export const Container = styled.div`
 `
 
 export const Logo = styled.div`
-    width: 143px;
+    width: 180px;
     margin: 0 auto;
 `
 
@@ -19,15 +19,15 @@ export const LogoImage = styled.img`
 `
 
 export const Title = styled.p`
-    font-size: 30px;
+    font-size: 36px;
     font-weight: bold;
     color: white;
     text-align: center;
 `
 
-export const Text = styled.p`
-    width: 300px;
-    font-size: 20px;
+export const TextContainer = styled.p`
+    width: 100%;
+    font-size: 18px;
     font-weight: bold;
     color: white;
     text-align: center;
@@ -36,7 +36,18 @@ export const Text = styled.p`
     margin-bottom: 10px;
 `
 
+export const Text = styled.p`
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    word-break: keep-all;
+    margin: 0 auto;
+`
+
 export const SmallText = styled.p`
+    font-size: 13px;
     color: white;
 `
 
@@ -68,12 +79,12 @@ export default class Home extends React.Component {
                 </Container>
                 <Container>
                     <Text>답을 구하시나요?</Text>
-                    <Text>우주는 알고 있습니다.</Text>
+                    <TextContainer>우주는 알고 있습니다.</TextContainer>
                 </Container>
                 <Container>
                     <SmallText>{`현재 총 ${this.state.hitCount}명이 참여했습니다.`}</SmallText>
                 </Container>
-                <NextButton text="> 시작하기" stepLocation={this.state.stepLocation} />
+                <NextButton size="190px" text="> 시작하기" stepLocation={this.state.stepLocation} />
             </div>
         );
     }

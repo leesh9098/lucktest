@@ -7,7 +7,7 @@ export const Wrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 280px;
   height: 100%;
   @media screen and (min-width: 768px) {
     width: 500px;
