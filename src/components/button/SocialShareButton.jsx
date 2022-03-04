@@ -19,6 +19,7 @@ const ShareContainer = styled.div`
 `
 
 const ShareText = styled.p`
+    font-family: 'LeeSeoyun', serif;
     color: white;
     font-weight: bold;
     text-align: center;

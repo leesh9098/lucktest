@@ -1,15 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import NextButton from "../components/button/NextButton";
-import { Container, Text, TextContainer } from "./Home";
+import { Container, InsertImage, Text, TextContainer } from "./Home";
+import Explainimg from "../images/explainimage.png";
 
 export const InputConcern = styled.input`
     width: 220px;
     height: 50px;
-    padding-left: 20px;
     border-radius: 20px;
     margin-bottom: 10px;
     box-sizing: border-box;
+    text-align: center;
 `
 
 export const RedText = styled.p`
@@ -33,11 +34,14 @@ export default class Explain extends React.Component {
         return (
             <div className="animate__animated animate__fadeIn animate__slower">
                 <Container>
+                    <InsertImage src={Explainimg} alt="이미지" />
+                </Container>
+                <Container>
                     <Text>10~20초 동안</Text>
-                    <TextContainer>당신의 질문에 집중하세요.</TextContainer>
+                    <TextContainer>당신의 고민에 대해서 집중하세요.</TextContainer>
                     <Text>질문은 한번에 하나씩,</Text>
-                    <TextContainer>완전한 문장으로</TextContainer>
-                    <Text>(예: "이번에 취업이 될까요?")</Text>
+                    <TextContainer>완전한 문장으로 질문해주세요.</TextContainer>
+                    <Text>(예시: "이번에 취업이 될까요?")</Text>
                 </Container>
                 <Container>
                     <InputConcern

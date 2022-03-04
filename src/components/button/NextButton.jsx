@@ -17,6 +17,7 @@ export const NextBtn = styled.button`
     word-break: keep-all;
     white-space: pre-wrap;
     margin: 0 auto;
+    font-size: 16px;
 `
 
 export const bgm = new Audio(Bgm);

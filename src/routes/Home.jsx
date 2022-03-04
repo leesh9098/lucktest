@@ -3,14 +3,15 @@ import styled from "styled-components";
 import NextButton, { bgm } from "../components/button/NextButton";
 import countapi from "countapi-js";
 import TrepickLogo from "../images/Logo.png"
+import Homeimg from "../images/homepageimage.png";
 
 export const Container = styled.div`
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 `
 
 export const Logo = styled.div`
-    width: 180px;
+    width: 100px;
     margin: 0 auto;
 `
 
@@ -19,16 +20,22 @@ export const LogoImage = styled.img`
 `
 
 export const Title = styled.p`
-    font-size: 36px;
+    font-family: 'LeeSeoyun', serif;
+    font-size: 34px;
     font-weight: bold;
     color: white;
     text-align: center;
 `
 
+export const InsertImage = styled.img`
+    width: 100%;
+`
+
 export const TextContainer = styled.p`
     width: 100%;
+    font-family: 'LeeSeoyun', serif;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 26px;
     font-weight: bold;
     color: white;
     text-align: center;
@@ -39,9 +46,10 @@ export const TextContainer = styled.p`
 
 export const Text = styled.p`
     width: 100%;
+    font-family: 'LeeSeoyun', serif;
     font-size: 18px;
     font-weight: bold;
-    line-height: 30px;
+    line-height: 26px;
     color: white;
     text-align: center;
     word-break: keep-all;
@@ -81,8 +89,12 @@ export default class Home extends React.Component {
                     <Title>인생 해결책</Title>
                 </Container>
                 <Container>
-                    <Text>답을 구하시나요?</Text>
+                    <InsertImage src={Homeimg} alt="메인 이미지" />
+                </Container>
+                <Container>
+                    <Text>인생의 답을 찾고 계신가요?</Text>
                     <TextContainer>우주는 알고 있습니다.</TextContainer>
+                    <Text style={{ marginTop: '20px' }}>허심탄회하게 이야기해보세요</Text>
                 </Container>
                 <Container>
                     <SmallText>{`현재 총 ${this.state.hitCount}명이 참여했습니다.`}</SmallText>
