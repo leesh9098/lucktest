@@ -2,6 +2,7 @@ import Store from "../../Store";
 import styled from "styled-components";
 import Bgm from "../../data/0. 시작.mp3";
 import axios from "axios";
+import countapi from "countapi-js";
 
 export const NextBtn = styled.button`
     display: block;
@@ -41,6 +42,7 @@ export default function NextButton(props) {
                     console.log(err);
                 })
                 Store.dispatch({ type: 'NEXTSTEP', stepLocation: props.stepLocation, answer: props.answer });
+                countapi.update('usercount', 'users', 1)
             }
         } else {
             Store.dispatch({ type: 'NEXTSTEP', stepLocation: props.stepLocation });
