@@ -28,6 +28,7 @@ export const Title = styled.p`
 export const TextContainer = styled.p`
     width: 100%;
     font-size: 18px;
+    line-height: 30px;
     font-weight: bold;
     color: white;
     text-align: center;
@@ -40,6 +41,7 @@ export const Text = styled.p`
     width: 100%;
     font-size: 18px;
     font-weight: bold;
+    line-height: 30px;
     color: white;
     text-align: center;
     word-break: keep-all;

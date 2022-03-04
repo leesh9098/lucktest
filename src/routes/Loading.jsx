@@ -6,21 +6,21 @@ import { Container } from "./Home";
 
 const LoadingText = styled.p`
     color: white;
-    font-size: 30px;
+    font-size: 22px;
 `
 
 export default function Loading() {
     useEffect(() => {
         setTimeout(() => {
             Store.dispatch({ type: 'NEXTSTEP', stepLocation: 2 });
-            }, 2000)
+            }, 3000)
         }
     )
     
     return (
         <div className="animate__animated animate__fadeIn animate__slow">
             <Container>
-                <LoadingText>결과 분석중</LoadingText>
+                <LoadingText>우주의 기운을 모으고 있습니다</LoadingText>
             </Container>
             <Oval
                 color="red"
